@@ -37,6 +37,10 @@ module.exports = env => {
             alias: {
                 vue$: "vue/dist/vue.esm-bundler.js",
             },
+            fallback: {
+                crypto: require.resolve("crypto-browserify"),
+                stream: require.resolve("stream-browserify"),
+            },
         },
         devServer: {
             open: true
